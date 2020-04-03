@@ -29,10 +29,10 @@
             android:id="@+id/FirstName"
             android:layout_width="194dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="First Name"
-            app:layout_constraintTop_toBottomOf="@+id/suffixDropDown"
 
-            >
+            app:layout_constraintTop_toBottomOf="@+id/suffixDropDown">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="194dp"
@@ -46,6 +46,7 @@
             android:layout_width="194dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:hint="Last Name"
             app:layout_constraintLeft_toRightOf="@+id/FirstName"
             app:layout_constraintTop_toBottomOf="@+id/suffixDropDown">
@@ -58,29 +59,32 @@
 
 
         <RadioGroup
+            android:id="@+id/employement_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:checkedButton="@+id/fullTime"
-            android:orientation="horizontal"
-            android:id="@+id/employement_type"
 
-            app:layout_constraintTop_toBottomOf="@+id/FirstName"
-            >
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/FirstName">
+
             <RadioButton
                 android:id="@+id/fullTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="fullTime"/>
+                android:text="fullTime" />
+
             <RadioButton
                 android:id="@+id/partTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="partTime"/>
+                android:text="partTime" />
+
             <RadioButton
                 android:id="@+id/trainee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="trainee"/>
+                android:text="trainee" />
         </RadioGroup>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -104,9 +108,9 @@
             android:id="@+id/unitNo"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:hint="Unit No."
+            android:layout_marginTop="5dp"
 
+            android:hint="Unit No."
             app:layout_constraintTop_toBottomOf="@+id/designation">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -121,6 +125,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:hint="Street No."
             app:layout_constraintLeft_toRightOf="@+id/unitNo"
             app:layout_constraintTop_toBottomOf="@+id/designation">
@@ -137,6 +142,7 @@
             android:layout_width="194dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:hint="Street Add."
             app:layout_constraintLeft_toRightOf="@+id/streetNo"
             app:layout_constraintTop_toBottomOf="@+id/designation">
@@ -152,9 +158,9 @@
             android:id="@+id/city"
             android:layout_width="194dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:hint="City"
+            android:layout_marginTop="5dp"
 
+            android:hint="City"
             app:layout_constraintTop_toBottomOf="@+id/streetName">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -169,6 +175,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:hint="Province"
             app:layout_constraintLeft_toRightOf="@+id/city"
             app:layout_constraintTop_toBottomOf="@+id/streetName">
@@ -185,6 +192,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:hint="Country"
             app:layout_constraintLeft_toRightOf="@+id/province"
             app:layout_constraintTop_toBottomOf="@+id/streetName">
@@ -197,10 +205,10 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/postal_code"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:hint="Postal Code"
             android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Postal Code"
             app:layout_constraintTop_toBottomOf="@+id/province">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -276,14 +284,13 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/issueTypeDropDown"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:id="@+id/issueTypeDropDown"
             android:hint="Issue Type"
-            app:layout_constraintTop_toBottomOf="@+id/issueDate"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/issueDate">
 
             <AutoCompleteTextView
                 android:id="@+id/issueTypeDropDownText"
@@ -292,18 +299,45 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <RatingBar
-            style="@style/RatingBar"
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:numStars="5"
-            android:rating="3.5"
-            android:stepSize="0.5"
-            app:layout_constraintTop_toBottomOf="@+id/issueTypeDropDown"
-            />
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/issueTypeDropDown" />
 
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Description"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/textButtonSend"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:text="Send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
