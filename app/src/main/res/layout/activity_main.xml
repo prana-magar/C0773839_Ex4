@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/suffixDropDown"
+            android:hint="Suffix"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/suffixDropDownText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/FirstName"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            app:layout_constraintTop_toBottomOf="@+id/suffixDropDown"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="194dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/LastName"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Last Name"
+            app:layout_constraintLeft_toRightOf="@+id/FirstName"
+            app:layout_constraintTop_toBottomOf="@+id/suffixDropDown">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="194dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/fullTime"
+            android:orientation="horizontal"
+            android:id="@+id/employement_type"
+
+            app:layout_constraintTop_toBottomOf="@+id/FirstName"
+            >
+            <RadioButton
+                android:id="@+id/fullTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fullTime"/>
+            <RadioButton
+                android:id="@+id/partTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="partTime"/>
+            <RadioButton
+                android:id="@+id/trainee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="trainee"/>
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Designation"
+            android:id="@+id/designation"
+            app:layout_constraintTop_toBottomOf="@+id/employement_type">
+
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/unitNo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Unit No."
+
+            app:layout_constraintTop_toBottomOf="@+id/designation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/streetNo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Street No."
+            app:layout_constraintLeft_toRightOf="@+id/unitNo"
+            app:layout_constraintTop_toBottomOf="@+id/designation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/streetName"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Street Add."
+            app:layout_constraintLeft_toRightOf="@+id/streetNo"
+            app:layout_constraintTop_toBottomOf="@+id/designation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="194dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="City"
+
+            app:layout_constraintTop_toBottomOf="@+id/streetName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="194dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/province"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Province"
+            app:layout_constraintLeft_toRightOf="@+id/city"
+            app:layout_constraintTop_toBottomOf="@+id/streetName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/country"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Country"
+            app:layout_constraintLeft_toRightOf="@+id/province"
+            app:layout_constraintTop_toBottomOf="@+id/streetName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/postal_code"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Postal Code"
+            android:layout_width="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/province">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Email"
+            android:layout_width="400dp"
+            app:layout_constraintTop_toBottomOf="@+id/postal_code">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="400dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/countryCode"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Code"
+            android:layout_width="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneNumber"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Phone Number"
+            android:layout_width="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintLeft_toRightOf="@+id/countryCode"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/issueDate"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="Issue Date"
+            android:layout_width="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/issueTypeDropDown"
+            android:hint="Issue Type"
+            app:layout_constraintTop_toBottomOf="@+id/issueDate"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/issueTypeDropDownText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RatingBar
+            style="@style/RatingBar"
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/issueTypeDropDown"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
