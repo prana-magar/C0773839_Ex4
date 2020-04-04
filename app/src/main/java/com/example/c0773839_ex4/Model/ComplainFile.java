@@ -192,4 +192,20 @@ public class ComplainFile implements Serializable {
     public void setSevRating(Float sevRating) {
         this.sevRating = sevRating;
     }
+
+    public String getPrintFormat(){
+        return "Name: "+ suffix + firstName +" " + lastName+ "\n"+
+                "Employement: "+ employementType+ "\n"+
+                "Designation: "+ designation + "\n"+
+                " Address: \n"+
+                "  "+unitNo+", "+streetNo+", "+streetName+"\n"+
+                "  "+city+", "+province+", "+country+", "+postalCode+"\n"+
+                "Email: "+email+"\n"+
+                "Phone: ("+countryCode+") "+phoneNumber+"\n"+
+                "Issue Date: "+issueDate+"\n"+
+                "Issue Type: "+issueType+"\n"+
+                "Description:   "+description+"\n"+
+                "Severity: "+sevRating+"";
+
+    }
 }
